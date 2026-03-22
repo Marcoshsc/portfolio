@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operating Principles | Marcos Cunha</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#4b2b00",
+              "surface-variant": "#23233f",
+              "on-error-container": "#ffb2b9",
+              "on-error": "#490013",
+              "tertiary-fixed-dim": "#e4942a",
+              "on-surface-variant": "#aaa8c3",
+              "surface-container-high": "#1d1d37",
+              "surface-container-highest": "#23233f",
+              "on-surface": "#e5e3ff",
+              "on-secondary": "#004d57",
+              "secondary-fixed": "#26e6ff",
+              "surface-tint": "#ff86c2",
+              "error-dim": "#d73357",
+              "secondary-dim": "#00d4ec",
+              "secondary": "#00e3fd",
+              "tertiary": "#ffb151",
+              "background": "#0c0c1f",
+              "on-background": "#e5e3ff",
+              "error": "#ff6e84",
+              "surface-container-low": "#111127",
+              "on-tertiary-fixed": "#2a1600",
+              "tertiary-container": "#f4a237",
+              "inverse-surface": "#fcf8ff",
+              "primary-fixed": "#ff6bba",
+              "outline-variant": "#46465c",
+              "tertiary-fixed": "#f4a237",
+              "on-primary-fixed": "#000000",
+              "primary-container": "#ff6bba",
+              "inverse-primary": "#b7007a",
+              "primary": "#ff86c2",
+              "surface-dim": "#0c0c1f",
+              "on-tertiary": "#593400",
+              "secondary-container": "#006875",
+              "surface-bright": "#292948",
+              "on-primary-fixed-variant": "#5b003a",
+              "inverse-on-surface": "#53536a",
+              "primary-fixed-dim": "#ff49b2",
+              "tertiary-dim": "#e4942a",
+              "on-primary": "#5f003d",
+              "error-container": "#a70138",
+              "primary-dim": "#dd0095",
+              "surface-container": "#17172f",
+              "surface": "#0c0c1f",
+              "on-tertiary-fixed-variant": "#573300",
+              "on-primary-container": "#4a002f",
+              "secondary-fixed-dim": "#00d7f0",
+              "on-secondary-fixed-variant": "#005964",
+              "on-secondary-container": "#e8fbff",
+              "outline": "#74738b",
+              "surface-container-lowest": "#000000",
+              "on-secondary-fixed": "#003a42"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mesh-gradient {
+            background: radial-gradient(at 0% 0%, rgba(255, 134, 194, 0.15) 0px, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(0, 227, 253, 0.15) 0px, transparent 50%),
+                        radial-gradient(at 50% 50%, rgba(255, 177, 81, 0.05) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 min-h-screen">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-7xl mx-auto left-0 right-0 bg-slate-950/50 backdrop-blur-xl shadow-[0_0_20px_rgba(255,134,194,0.06)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pink-400" data-icon="terminal">terminal</span>
+<span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-cyan-400 font-['Space_Grotesk'] tracking-tight">Marcos Cunha</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-400 font-['Space_Grotesk'] tracking-tight hover:text-pink-300 transition-colors" href="#">Home</a>
+<a class="text-slate-400 font-['Space_Grotesk'] tracking-tight hover:text-pink-300 transition-colors" href="#">Projects</a>
+<a class="text-cyan-400 font-bold font-['Space_Grotesk'] tracking-tight hover:text-pink-300 transition-colors" href="#">Principles</a>
+<a class="text-slate-400 font-['Space_Grotesk'] tracking-tight hover:text-pink-300 transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="text-sm font-label text-secondary tracking-wide uppercase">Available</span>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-7xl mx-auto relative overflow-hidden">
+<!-- Background Fluid Shapes -->
+<div class="absolute top-40 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10"></div>
+<div class="absolute bottom-40 -right-20 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] -z-10"></div>
+<!-- Section Header -->
+<div class="mb-20">
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-on-surface">
+                Operating Principles
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl font-light leading-relaxed">
+                The core directives that drive my architectural decisions, execution speed, and commitment to project excellence.
+            </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- OWNER MINDSET - High Impact Headline Card -->
+<div class="md:col-span-12 lg:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low p-8 md:p-12 shadow-[0_0_40px_rgba(255,134,194,0.03)] border border-white/5 transition-all duration-500 hover:shadow-[0_0_60px_rgba(255,134,194,0.08)]">
+<div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-primary/20 to-transparent blur-3xl opacity-50 transition-opacity duration-500 group-hover:opacity-80"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<span class="text-primary font-headline font-bold tracking-[0.2em] text-sm uppercase mb-6 block">Foundational Pillar</span>
+<h2 class="font-headline text-6xl md:text-8xl font-black text-on-surface leading-[0.85] tracking-tighter mb-8 drop-shadow-[0_0_15px_rgba(255,134,194,0.4)]">
+                            OWNER<br/>MINDSET
+                        </h2>
+</div>
+<div class="max-w-xl">
+<p class="text-on-surface-variant text-xl leading-relaxed mb-6 italic">
+                            "I don't just write code; I own the outcome. If a feature fails at 3 AM, I'm the first line of defense."
+                        </p>
+<p class="text-on-surface text-lg">
+                            Operating with a sense of extreme responsibility. Every line of code is treated as an investment in the product's long-term health, performance, and scalability.
+                        </p>
+</div>
+</div>
+</div>
+<!-- END-TO-END DELIVERY - Vibrant Color Block -->
+<div class="md:col-span-6 lg:col-span-4 bg-primary text-on-primary-fixed rounded-xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-6 block" data-icon="package_2">package_2</span>
+<h3 class="font-headline text-3xl font-bold mb-4 tracking-tight">END-TO-END DELIVERY</h3>
+<p class="font-medium text-on-primary-fixed/80 leading-snug">
+                        From system architecture and database design to pixel-perfect UI implementation and automated deployment pipelines.
+                    </p>
+</div>
+<div class="relative z-10 mt-8 space-y-3">
+<div class="h-px bg-on-primary-fixed/20 w-full"></div>
+<div class="flex justify-between items-center text-sm font-bold uppercase tracking-widest">
+<span>Ideation</span>
+<span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+<span>Production</span>
+</div>
+</div>
+</div>
+<!-- EXTREMELY FAST LEARNER - Adaptability Section -->
+<div class="md:col-span-6 lg:col-span-4 bg-surface-container-high rounded-xl p-8 border border-white/5 flex flex-col">
+<div class="mb-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider mb-6">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+                        Hyper-Adaptability
+                    </div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">EXTREMELY FAST LEARNER</h3>
+<p class="text-on-surface-variant">
+                        The ability to pivot between tech stacks without friction. I thrive in environments where the tools are new and the problems are ill-defined.
+                    </p>
+</div>
+<div class="mt-auto grid grid-cols-2 gap-3">
+<div class="bg-surface-container-highest p-4 rounded-lg">
+<div class="text-secondary font-headline text-2xl font-bold mb-1">0 to 1</div>
+<div class="text-on-surface-variant text-xs uppercase tracking-tighter">Stack Mastery</div>
+</div>
+<div class="bg-surface-container-highest p-4 rounded-lg">
+<div class="text-secondary font-headline text-2xl font-bold mb-1">48h</div>
+<div class="text-on-surface-variant text-xs uppercase tracking-tighter">Onboarding</div>
+</div>
+</div>
+</div>
+<!-- AUTONOMY & STRATEGY -->
+<div class="md:col-span-12 lg:col-span-8 bg-surface-container-low rounded-xl p-8 md:p-12 border border-white/5 flex flex-col md:flex-row gap-12 items-center mesh-gradient">
+<div class="w-full md:w-1/2">
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-6">RADICAL AUTONOMY</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="visibility">visibility</span>
+<div>
+<h4 class="font-bold text-on-surface">Predictive Problem Solving</h4>
+<p class="text-on-surface-variant text-sm">Identifying bottlenecks before they impact the sprint velocity.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="route">route</span>
+<div>
+<h4 class="font-bold text-on-surface">Strategic Alignment</h4>
+<p class="text-on-surface-variant text-sm">Ensuring technical choices directly serve the business goals.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-container-highest/50 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-inner">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="psychology">psychology</span>
+</div>
+<span class="font-headline font-bold text-lg">Execution Logic</span>
+</div>
+<div class="space-y-4">
+<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-pink-500 w-[95%]"></div>
+</div>
+<div class="flex justify-between text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">
+<span>Deep Focus</span>
+<span>Speed</span>
+</div>
+<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-cyan-400 to-secondary w-[88%]"></div>
+</div>
+<div class="flex justify-between text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">
+<span>Self-Correction</span>
+<span>Vision</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex justify-center pb-safe">
+<div class="bg-slate-900/40 backdrop-blur-2xl rounded-full mb-6 mx-auto w-fit px-2 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center gap-1 py-1">
+<a class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+</a>
+<a class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</a>
+<a class="bg-gradient-to-br from-pink-500/20 to-cyan-500/20 text-pink-400 shadow-[0_0_15px_rgba(255,134,194,0.4)] rounded-full p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</a>
+<a class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+</nav>
+</body></html>

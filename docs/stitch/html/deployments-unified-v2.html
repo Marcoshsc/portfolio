@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shipped Projects | Marcos Cunha</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c0c1f;
+            color: #e5e3ff;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Custom Glassmorphism */
+        .glass-card {
+            background: rgba(29, 29, 55, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        /* Custom Mesh Gradients for Background */
+        .mesh-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(255, 134, 194, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 227, 253, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(255, 177, 81, 0.03) 0%, transparent 50%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-tertiary-container": "#4b2b00",
+                "surface-variant": "#23233f",
+                "on-error-container": "#ffb2b9",
+                "on-error": "#490013",
+                "tertiary-fixed-dim": "#e4942a",
+                "on-surface-variant": "#aaa8c3",
+                "surface-container-high": "#1d1d37",
+                "surface-container-highest": "#23233f",
+                "on-surface": "#e5e3ff",
+                "on-secondary": "#004d57",
+                "secondary-fixed": "#26e6ff",
+                "surface-tint": "#ff86c2",
+                "error-dim": "#d73357",
+                "secondary-dim": "#00d4ec",
+                "secondary": "#00e3fd",
+                "tertiary": "#ffb151",
+                "background": "#0c0c1f",
+                "on-background": "#e5e3ff",
+                "error": "#ff6e84",
+                "surface-container-low": "#111127",
+                "on-tertiary-fixed": "#2a1600",
+                "tertiary-container": "#f4a237",
+                "inverse-surface": "#fcf8ff",
+                "primary-fixed": "#ff6bba",
+                "outline-variant": "#46465c",
+                "tertiary-fixed": "#f4a237",
+                "on-primary-fixed": "#000000",
+                "primary-container": "#ff6bba",
+                "inverse-primary": "#b7007a",
+                "primary": "#ff86c2",
+                "surface-dim": "#0c0c1f",
+                "on-tertiary": "#593400",
+                "secondary-container": "#006875",
+                "surface-bright": "#292948",
+                "on-primary-fixed-variant": "#5b003a",
+                "inverse-on-surface": "#53536a",
+                "primary-fixed-dim": "#ff49b2",
+                "tertiary-dim": "#e4942a",
+                "on-primary": "#5f003d",
+                "error-container": "#a70138",
+                "primary-dim": "#dd0095",
+                "surface-container": "#17172f",
+                "surface": "#0c0c1f",
+                "on-tertiary-fixed-variant": "#573300",
+                "on-primary-container": "#4a002f",
+                "secondary-fixed-dim": "#00d7f0",
+                "on-secondary-fixed-variant": "#005964",
+                "on-secondary-container": "#e8fbff",
+                "outline": "#74738b",
+                "surface-container-lowest": "#000000",
+                "on-secondary-fixed": "#003a42"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30 selection:text-primary-fixed">
+<div class="mesh-gradient"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-7xl mx-auto left-0 right-0 bg-slate-950/50 backdrop-blur-xl shadow-[0_0_20px_rgba(255,134,194,0.06)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pink-400">terminal</span>
+<span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-cyan-400 font-headline tracking-tight">Marcos Cunha</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-headline text-sm uppercase tracking-widest">
+<a class="text-slate-400 hover:text-pink-300 transition-colors" href="#">Home</a>
+<a class="text-cyan-400 font-bold hover:text-pink-300 transition-colors" href="#">Projects</a>
+<a class="text-slate-400 hover:text-pink-300 transition-colors" href="#">Stack</a>
+<a class="text-slate-400 hover:text-pink-300 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#00e3fd] animate-pulse"></div>
+<span class="text-xs font-label text-secondary uppercase tracking-tighter">Available</span>
+</div>
+</nav>
+<main class="pt-32 pb-40 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-20 relative">
+<div class="absolute -left-12 -top-12 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter mb-4 leading-none">
+            Shipped <br/>
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-tertiary">Projects</span>
+</h1>
+<p class="max-w-xl text-on-surface-variant text-lg font-light leading-relaxed border-l-2 border-outline-variant pl-6 mt-8">
+            Engineering scalable solutions across diverse industrial sectors. From distributed logistics to high-performance metallurgy platforms.
+        </p>
+</header>
+<!-- Project Cards Grid -->
+<div class="grid grid-cols-1 gap-12">
+<!-- RHI Magnesita -->
+<section class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glass-card border border-white/5 shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative p-8 h-full flex flex-col">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-8">
+<div>
+<span class="text-xs font-label tracking-[0.2em] text-primary uppercase mb-2 block">DTI Digital • Major Account</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight">RHI Magnesita</h2>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/30 text-secondary text-[10px] font-bold uppercase tracking-widest rounded-full border border-secondary/20">Active Leadership</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-lg mb-10 leading-relaxed max-w-3xl">
+                    Spearheading critical digital transformation initiatives for the world leader in refractory products. Responsible for architecting robust system integrations and mentoring cross-functional squads to maintain high-velocity delivery.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<div class="space-y-4">
+<h4 class="text-sm font-headline text-on-surface/50 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">architecture</span> Architecture &amp; Leadership
+                        </h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex gap-2">
+<span class="text-primary mt-1">•</span> 
+                                Defined microservices patterns for global manufacturing sync.
+                            </li>
+<li class="flex gap-2">
+<span class="text-primary mt-1">•</span> 
+                                Strategic technical debt management and legacy migration.
+                            </li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-2 self-start">
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-cyan-500/30 text-cyan-400">React.js</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-purple-500/30 text-purple-400">.NET Core</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-red-500/30 text-red-400">Ruby on Rails</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-primary/30 text-primary">Micro frontends</span>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-xs font-label text-on-surface/40 italic">Industrial Digital Transformation</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</section>
+<!-- AgileEngine -->
+<section class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glass-card border border-white/5 shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative p-8 h-full flex flex-col">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-8">
+<div>
+<span class="text-xs font-label tracking-[0.2em] text-secondary uppercase mb-2 block">International Collaboration</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight">AgileEngine</h2>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary-container/30 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full border border-primary/20">Global Delivery</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-lg mb-10 leading-relaxed max-w-3xl">
+                    Developed high-concurrency applications for global enterprise clients. Focused on building scalable backend architectures and fluid user interfaces with strict performance benchmarks and high code quality standards.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<div class="space-y-4">
+<h4 class="text-sm font-headline text-on-surface/50 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">rocket_launch</span> Engineering Excellence
+                        </h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex gap-2">
+<span class="text-secondary mt-1">•</span> 
+                                Optimization of high-traffic Java Spring Boot services.
+                            </li>
+<li class="flex gap-2">
+<span class="text-secondary mt-1">•</span> 
+                                Implementation of complex frontend state management patterns.
+                            </li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-2 self-start">
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-orange-500/30 text-orange-400">Java</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-green-500/30 text-green-400">Spring Boot</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-cyan-500/30 text-cyan-400">React</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-secondary/30 text-secondary">AWS Cloud</span>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-xs font-label text-on-surface/40 italic">Software Engineering Services</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</section>
+<!-- DTI Digital Ecosystem -->
+<section class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glass-card border border-white/5 shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative p-8 h-full flex flex-col">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-8">
+<div>
+<span class="text-xs font-label tracking-[0.2em] text-tertiary uppercase mb-2 block">DTI Digital • Project Portfolio</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight">Digital Ecosystem</h2>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-tertiary-container/30 text-tertiary text-[10px] font-bold uppercase tracking-widest rounded-full border border-tertiary/20">Multi-Sector Impact</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-lg mb-10 leading-relaxed max-w-3xl">
+                    Driving innovation across retail, agriculture, and heavy industry. From revolutionizing the retail checkout experience to architecting precision agriculture platforms and steel production management systems.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<div class="space-y-4">
+<h4 class="text-sm font-headline text-on-surface/50 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">settings_suggest</span> Key Contributions
+                        </h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex gap-2">
+<span class="text-tertiary mt-1">•</span> 
+                                C&amp;A Self-Service: Kiosk UX &amp; Backend integration.
+                            </li>
+<li class="flex gap-2">
+<span class="text-tertiary mt-1">•</span> 
+                                Syngenta: Precision data analytics for agritech.
+                            </li>
+<li class="flex gap-2">
+<span class="text-tertiary mt-1">•</span> 
+                                Ternium: High-availability MES for steel mills.
+                            </li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-2 self-start">
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-pink-500/30 text-pink-400">Retail Tech</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-yellow-500/30 text-yellow-400">AgriTech</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-blue-500/30 text-blue-400">Industrial IoT</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-tertiary/30 text-tertiary">Product Strategy</span>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-xs font-label text-on-surface/40 italic">Cross-Industry Digital Solutions</span>
+<span class="material-symbols-outlined text-tertiary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</section>
+<!-- UFOP Research -->
+<section class="group relative overflow-hidden rounded-xl bg-surface-container-high p-1 glass-card border border-white/5 shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="relative p-8 h-full flex flex-col">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-8">
+<div>
+<span class="text-xs font-label tracking-[0.2em] text-on-surface-variant uppercase mb-2 block">Academic Research • UFOP</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight">UFOP Research</h2>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-widest rounded-full border border-white/10">Algorithm Optimization</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-lg mb-10 leading-relaxed max-w-3xl">
+                    Developed a distributed system for complex school bus routing problems. Optimized graph algorithms to minimize fuel consumption and travel time for public education logistics in the state of Minas Gerais.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<div class="space-y-4">
+<h4 class="text-sm font-headline text-on-surface/50 uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">hub</span> Distributed Computing
+                        </h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex gap-2">
+<span class="text-primary mt-1">•</span> 
+                                High-performance heuristics for VRP (Vehicle Routing Problem).
+                            </li>
+<li class="flex gap-2">
+<span class="text-primary mt-1">•</span> 
+                                Parallel processing architecture for large-scale data sets.
+                            </li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-2 self-start">
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-red-500/30 text-red-400">C++</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-blue-500/30 text-blue-400">Distributed Systems</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-purple-500/30 text-purple-400">Graph Theory</span>
+<span class="px-4 py-2 bg-surface-container-highest rounded-lg text-xs font-medium border border-primary/30 text-primary">Logistics</span>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+<span class="text-xs font-label text-on-surface/40 italic">Education Logistics Systems</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 flex justify-center pb-safe">
+<nav class="bg-slate-900/40 backdrop-blur-2xl rounded-full mb-6 mx-auto w-fit px-2 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center">
+<a class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">home_app_logo</span>
+</a>
+<a class="bg-gradient-to-br from-pink-500/20 to-cyan-500/20 text-pink-400 shadow-[0_0_15px_rgba(255,134,194,0.4)] rounded-full p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">code</span>
+</a>
+<a class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">psychology</span>
+</a>
+<a class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</nav>
+</div>
+</body></html>

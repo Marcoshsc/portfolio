@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marcos Cunha | Fullstack Engineer &amp; AI Pioneer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0c1f;
+            color: #e5e3ff;
+            overflow-x: hidden;
+        }
+        .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .mesh-gradient {
+            background: radial-gradient(at 0% 0%, rgba(255, 134, 194, 0.15) 0px, transparent 50%),
+                        radial-gradient(at 100% 0%, rgba(0, 227, 253, 0.15) 0px, transparent 50%),
+                        radial-gradient(at 50% 100%, rgba(255, 177, 81, 0.1) 0px, transparent 50%);
+        }
+        .glass-card {
+            backdrop-filter: blur(20px);
+            background: rgba(17, 17, 39, 0.4);
+        }
+        .pulse-secondary {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .7; transform: scale(1.1); }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-tertiary-container": "#4b2b00",
+                "surface-variant": "#23233f",
+                "on-error-container": "#ffb2b9",
+                "on-error": "#490013",
+                "tertiary-fixed-dim": "#e4942a",
+                "on-surface-variant": "#aaa8c3",
+                "surface-container-high": "#1d1d37",
+                "surface-container-highest": "#23233f",
+                "on-surface": "#e5e3ff",
+                "on-secondary": "#004d57",
+                "secondary-fixed": "#26e6ff",
+                "surface-tint": "#ff86c2",
+                "error-dim": "#d73357",
+                "secondary-dim": "#00d4ec",
+                "secondary": "#00e3fd",
+                "tertiary": "#ffb151",
+                "background": "#0c0c1f",
+                "on-background": "#e5e3ff",
+                "error": "#ff6e84",
+                "surface-container-low": "#111127",
+                "on-tertiary-fixed": "#2a1600",
+                "tertiary-container": "#f4a237",
+                "inverse-surface": "#fcf8ff",
+                "primary-fixed": "#ff6bba",
+                "outline-variant": "#46465c",
+                "tertiary-fixed": "#f4a237",
+                "on-primary-fixed": "#000000",
+                "primary-container": "#ff6bba",
+                "inverse-primary": "#b7007a",
+                "primary": "#ff86c2",
+                "surface-dim": "#0c0c1f",
+                "on-tertiary": "#593400",
+                "secondary-container": "#006875",
+                "surface-bright": "#292948",
+                "on-primary-fixed-variant": "#5b003a",
+                "inverse-on-surface": "#53536a",
+                "primary-fixed-dim": "#ff49b2",
+                "tertiary-dim": "#e4942a",
+                "on-primary": "#5f003d",
+                "error-container": "#a70138",
+                "primary-dim": "#dd0095",
+                "surface-container": "#17172f",
+                "surface": "#0c0c1f",
+                "on-tertiary-fixed-variant": "#573300",
+                "on-primary-container": "#4a002f",
+                "secondary-fixed-dim": "#00d7f0",
+                "on-secondary-fixed-variant": "#005964",
+                "on-secondary-container": "#e8fbff",
+                "outline": "#74738b",
+                "surface-container-lowest": "#000000",
+                "on-secondary-fixed": "#003a42"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-dim selection:bg-primary/30 min-h-screen flex flex-col mesh-gradient">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-7xl mx-auto bg-slate-950/50 backdrop-blur-xl shadow-[0_0_20px_rgba(255,134,194,0.06)] tonal-transition-surface-bright">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pink-400" data-icon="terminal">terminal</span>
+<h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-cyan-400 font-['Space_Grotesk'] tracking-tight">Marcos Cunha</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] text-[14px] uppercase tracking-wider">
+<a class="text-cyan-400 font-bold hover:text-pink-300 transition-colors" href="#">Home</a>
+<a class="text-slate-400 hover:text-pink-300 transition-colors" href="#">Projects</a>
+<a class="text-slate-400 hover:text-pink-300 transition-colors" href="#">Lab</a>
+<a class="text-slate-400 hover:text-pink-300 transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary pulse-secondary shadow-[0_0_8px_#00e3fd]"></span>
+<span class="text-pink-400 dark:text-pink-400 font-['Space_Grotesk'] tracking-tight text-sm font-medium">Available</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center pt-24 pb-32 px-6">
+<div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Content: Hero Text -->
+<div class="lg:col-span-7 z-10 space-y-8">
+<div class="space-y-4">
+<span class="inline-block py-1 px-4 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-[0.2em] uppercase">
+                        System Initialized
+                    </span>
+<h2 class="text-5xl md:text-7xl font-headline font-bold leading-none tracking-tight text-on-surface">
+                        MARCOS CUNHA // <br/>
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-tertiary">FULLSTACK ENGINEER &amp; AI PIONEER</span>
+</h2>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl font-body leading-relaxed">
+                        End-to-end delivery. Owner mindset. Fast learner. Building the future of digital architecture with high-performance code and fluid design.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 rounded-xl bg-gradient-to-br from-primary to-primary-dim text-on-primary-fixed font-headline font-bold text-lg shadow-[0_0_20px_rgba(255,134,194,0.3)] hover:scale-105 transition-transform active:scale-95 group flex items-center gap-3">
+                        Explore My Work
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="px-8 py-4 rounded-xl glass-card border border-white/10 hover:border-secondary/50 text-on-surface font-headline font-medium text-lg transition-all hover:shadow-[0_0_20px_rgba(0,227,253,0.1)]">
+                        Download CV
+                    </button>
+</div>
+<!-- Subtle Tech Indicators -->
+<div class="pt-8 flex gap-6 text-on-surface-variant/40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="data_object">data_object</span>
+<span class="text-xs font-headline tracking-widest uppercase">Typescript</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="neurology">neurology</span>
+<span class="text-xs font-headline tracking-widest uppercase">Generative AI</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="layers">layers</span>
+<span class="text-xs font-headline tracking-widest uppercase">System Design</span>
+</div>
+</div>
+</div>
+<!-- Right Content: Hero Portrait -->
+<div class="lg:col-span-5 relative group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 via-secondary/20 to-tertiary/20 rounded-[2rem] blur-3xl group-hover:blur-[50px] transition-all duration-700"></div>
+<!-- Floating Decorative Elements -->
+<div class="absolute -top-6 -right-6 w-24 h-24 glass-card border border-white/10 rounded-2xl flex items-center justify-center shadow-2xl z-20">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="code_blocks" style="font-variation-settings: 'FILL' 1;">code_blocks</span>
+</div>
+<div class="absolute -bottom-10 -left-6 px-6 py-4 glass-card border border-white/10 rounded-2xl shadow-2xl z-20 flex flex-col gap-1">
+<span class="text-[10px] text-tertiary font-headline tracking-widest uppercase">Project Velocity</span>
+<div class="flex items-center gap-3">
+<div class="h-1.5 w-32 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full w-[94%] bg-gradient-to-r from-tertiary to-primary rounded-full"></div>
+</div>
+<span class="text-xs font-bold text-on-surface">94%</span>
+</div>
+</div>
+<!-- Main Image Container -->
+<div class="relative rounded-[2.5rem] overflow-hidden border border-white/5 aspect-[4/5] bg-surface-container-high shadow-2xl transform lg:rotate-2 group-hover:rotate-0 transition-transform duration-500">
+<img alt="Marcos Cunha Professional Portrait" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700" data-alt="Professional portrait of a confident male software engineer in dark studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1gE-r9Nem3uHisRF9TYOtbff-Vh354obRI5QiSz0t8vAx87rqY6f11kdUfDIpnmQaK0Fhp2QeMw8iVIm-YmVea9nYqc0czafoFFPkC-NT6kezP-d2CTJngOzlp_D4r-HYGh-wVpR2z4OFEk7fhYZYE5bSny411ILMDNq3mzbYSGukVzr6_1Iv7z8kHH1esBrtcvSB46TxG-6QtASSis1Mdd5wk0Lh5UMUDaoPUiVSp77s_Qz1Lj482e1IMyfS7Q4UJhSHEj0Sr44v"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Status Bar -->
+<footer class="fixed bottom-8 left-0 right-0 z-40 flex justify-center px-6 pointer-events-none">
+<div class="glass-card border border-white/10 rounded-full px-8 py-3 flex items-center gap-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] pointer-events-auto">
+<div class="flex items-center gap-2 border-r border-white/10 pr-4">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary pulse-secondary"></span>
+<span class="text-[11px] font-headline text-on-surface tracking-[0.2em] uppercase font-bold">Ready for Deployment</span>
+</div>
+<div class="flex items-center gap-4 pl-2">
+<span class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors cursor-pointer" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors cursor-pointer" data-icon="monitoring">monitoring</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors cursor-pointer" data-icon="hub">hub</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar Shell (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 flex justify-center pb-safe">
+<nav class="bg-slate-900/40 backdrop-blur-2xl rounded-full mb-6 mx-auto w-fit px-2 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center">
+<div class="bg-gradient-to-br from-pink-500/20 to-cyan-500/20 text-pink-400 shadow-[0_0_15px_rgba(255,134,194,0.4)] rounded-full p-3 m-1">
+<span class="material-symbols-outlined" data-icon="home_app_logo" style="font-variation-settings: 'FILL' 1;">home_app_logo</span>
+</div>
+<div class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</div>
+<div class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<div class="text-slate-500 p-3 hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+</nav>
+</div>
+</body></html>
